@@ -1,0 +1,74 @@
+@import "../../styles/mixins";
+@import "../../styles/reset";
+
+/*----------------------------------------- Header ----------------------------------------*/
+header.not-active {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  background: transparent;
+  z-index: 10;
+}
+// // displaying on WindowScrollY
+
+header.active {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  box-shadow: 0 0 10px lighten($color: gray, $amount: 20);
+  background-color: #f5f5f5;
+  z-index: 10;
+}
+
+header {
+  .container-wrapper {
+    @include Container;
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    justify-content: space-between;
+    .left {
+      display: flex;
+      align-items: center;
+      h1.logo {
+        font-size: smaller;
+        margin-left: 0.4em;
+      }
+    }
+    .middle {
+      display: none;
+    }
+    .right {
+      display: flex;
+      .a-style {
+        display: flex;
+        align-items: center;
+
+        .link {
+          @include astyle;
+          border-radius: 245px;
+          .Withprofile {
+            display: flex;
+            font-size: 0.8rem;
+            .title {
+              display: none;
+            }
+          }
+
+          &:first-child {
+            background-color: #f5f5f5;
+            margin-right: 5px;
+            padding: 2px 6px;
+            margin-right: 0.3rem;
+          }
+          &:last-child {
+            background-color: black;
+            color: #f5f5f5 ;
+            padding: 2px 10px;
+          }
+        }
+      }
+    }
+  }
+}

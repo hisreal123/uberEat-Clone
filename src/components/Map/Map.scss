@@ -1,0 +1,32 @@
+@import "../../styles/mixins";
+
+.Map {
+  height: 60vh;
+  width: 100%;
+  padding-bottom: 20px;
+  .Container {
+    height: inherit;
+    width: inherit;
+    @include Container;
+    .top {
+      display: flex;
+      justify-content: space-between;
+      a {
+        color: black;
+        font-weight: bold;
+        align-self: center;
+        display: none;
+      }
+    }
+  }
+  /*----------------------------------------- Big screen View Last View Shoot  ----------------------------------------*/
+  @media (min-width: 769px) and (max-width: 3000px) {
+    .Container {
+      .top {
+        a {
+          display: block;
+        }
+      }
+    }
+  }
+}

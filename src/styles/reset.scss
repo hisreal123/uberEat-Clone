@@ -1,0 +1,22 @@
+@import "./mixins";
+@import "./sideBar";
+
+// Reset for font
+// I personaly love to use this font
+// You can change and use font of your to see difference
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  // font-weight: 400;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  transition: 0.2s all ease-in-out;
+  line-height: 1.5;
+//   color: black;
+}
+
+body {
+  min-height: 100vh;
+}

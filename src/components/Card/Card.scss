@@ -1,0 +1,67 @@
+// Card-style
+
+@import "../../styles/mixins";
+/*  ====================== mobileView first (<= 320px) ========================= */
+.Card-Style {
+  position: relative;
+  padding-top: 20px;
+
+  .Container {
+    @include Container;
+    height: auto;
+    .ImgWrapper {
+      position: relative;
+      height: 80%;
+      //   margin-bottom: 20px;
+      overflow: hidden;
+      img {
+        position: relative;
+        height: 150px;
+        max-width: 100px;
+        &:hover {
+          transform: scale(105deg);
+        }
+      }
+    }
+
+    h2 {
+      font-size: 1.1rem;
+    }
+    a {
+      color: black;
+      font-size: 0.8rem;
+
+      &:hover {
+        font-weight: bold;
+      }
+    }
+  }
+
+  /*  ====================== Tablet========================= */
+
+  @media (min-width: 321px) and (max-width: 768px) {
+    padding-bottom: 30px;
+    .Container {
+      h2 {
+        font-size: 1.4rem;
+      }
+      a {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  /*  ====================== BigDevice ========================= */
+
+  @media (min-width: 769px) and (max-width: 3000px) {
+    padding-bottom: 60px;
+    .Container {
+      h2 {
+        font-size: 1.8em;
+      }
+      a {
+        font-size: 1rem;
+      }
+    }
+  }
+}

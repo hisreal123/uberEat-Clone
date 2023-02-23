@@ -1,0 +1,41 @@
+// All mixins goes in here
+
+// Container
+@mixin Container {
+  position: relative;
+  width: 95%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+// InputWrapper
+@mixin InputWrapper {
+  display: flex;
+  align-items: center;
+  background-color: lighten($color: #eeeeee, $amount: 0);
+  width: 50%;
+  padding: 3px 6px 3px 3px;
+
+  &:focus {
+    border-bottom: 2px solid black;
+  }
+}
+
+@mixin Input {
+  position: relative;
+  width: 100%;
+  border: none;
+  padding: 10px;
+  background-color: lighten($color: #eeeeee, $amount: 0);
+  outline: none;
+  font-size: 1.1rem;
+}
+@mixin astyle {
+  color: black;
+  border: transparent;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+// @mixin FlexSet($alignCent, $justify, $flex){
+//   $alignCent : ' '
+// }

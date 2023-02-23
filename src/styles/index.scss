@@ -1,0 +1,185 @@
+/*----------------------------------------- Mixins ----------------------------------------*/
+// Apparently same ass Home.tsx + App.tsx stly
+@import "./reset.scss";
+
+/*----------------------------------------- Mobile First View  ----------------------------------------*/
+/*----------------------------------------- Banner ----------------------------------------*/
+.Banner {
+  height: 100vh;
+  background-image: url("../assets/mobileBg.png");
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+
+  .Container {
+    @include Container;
+    position: relative;
+    transform: translateY(-20px);
+
+    h1 {
+      font-size: 2.2rem;
+      width: 80%;
+      font-weight: 500;
+      margin-bottom: 40px;
+    }
+
+    .searchAddress {
+      display: flex;
+      flex-direction: column;
+
+      .inputWrapper {
+        @include InputWrapper;
+        width: 100%;
+        margin-bottom: 5px;
+        .inputStyle {
+          @include Input;
+        }
+      }
+
+      .select {
+        @include InputWrapper;
+        width: 100%;
+        margin-bottom: 5px;
+        .selectOption {
+          @include InputWrapper;
+          width: 80%;
+          border: none;
+          font-weight: bold;
+          .inputStyle {
+            position: relative;
+            width: 100%;
+            display: none;
+          }
+        }
+      }
+
+      //TODO: Style for select options and add margin-x
+
+      .a-style {
+        background-color: black;
+        padding: 15px;
+        border-radius: 5px;
+        .link {
+          @include astyle;
+          color: #f5f5f5;
+          text-align: center;
+        }
+      }
+    }
+    // sigin
+    p.signin {
+      font-weight: 500;
+      a {
+        color: black;
+      }
+      margin-top: 20px;
+    }
+  }
+
+  /*----------------------------------------- Big screen View Last View Shoot  ----------------------------------------*/
+  @media (min-width: 769px) and (max-width: 3000px) {
+    background-image: url("../assets/bg-Big.png");
+    .Container {
+      h1 {
+        font-size: 3rem;
+        width: 60%;
+        font-weight: bolder;
+        margin-bottom: 20px;
+      }
+
+      .searchAddress {
+        display: flex;
+        flex-direction: row;
+        width: 60%;
+        .inputWrapper {
+          margin-right: 10px;
+          // max-width: 10%;
+          // .inputStyle {
+          // }
+        }
+
+        .select {
+          width: 40%;
+          .selectOption {
+            width: 80%;
+            border: none;
+            font-weight: bold;
+            .inputStyle {
+              width: 50%;
+              display: block;
+            }
+          }
+        }
+
+        .a-style {
+          position: relative;
+          margin-bottom: 5px;
+          width: 200px;
+          height: inherit;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 5px;
+          margin-left: 10px;
+
+          &:hover {
+            background-color: lighten(black, 20);
+          }
+          .link {
+            color: #f5f5f5;
+            text-align: center;
+            line-height: 2px;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// BlackWrapper
+.blackWrapper {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.733);
+  width: 100vw;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+}
+
+.blackWrapper-hidden {
+  display: none;
+}
+
+// Card in Home as HomeCard
+// note that this is only controlling the style for div element wrapping the total amount of card we duplicate in  Home.tsx
+
+.HomeCard {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  height: 100%;
+}
+
+/*----------------------------------------- Tablet View Second View Shoot  ----------------------------------------*/
+
+@media (min-width: 321px) and (max-width: 768px) {
+  .HomeCard {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  /* Styles here */
+}
+/*----------------------------------------- Big screen View Last View Shoot  ----------------------------------------*/
+@media (min-width: 769px) and (max-width: 3000px) {
+  .HomeCard {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+  }
+  /* Styles here */
+}
