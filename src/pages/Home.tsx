@@ -108,9 +108,9 @@ export default function Home({ show }: HomeProps) {
 
             {/* display cards with few details  */}
             <div className="HomeCard">
-                <Card imgUrl="../src/assets/employee.jpg" link='#' style='Card-Style' title='Feed your employees' desc='Create a business account' />
-                <Card imgUrl="../src/assets/employee.jpg" link='#' style='Card-Style' title='Feed your employees' desc='Create a business account' />
-                <Card imgUrl="../src/assets/employee.jpg" link='#' style='Card-Style' title='Feed your employees' desc='Create a business account' />
+                <Card imgUrl="./assets/employee.jpg" link='#' style='Card-Style' title='Feed your employees' desc='Create a business account' />
+                <Card imgUrl="./assets/employee.jpg" link='#' style='Card-Style' title='Your restaurant, delivered' desc='Add to your resturant ' />
+                <Card imgUrl="./assets/employee.jpg" link='#' style='Card-Style' title='Deliver with Uber Eats' desc='Sign up to deliver ' />
             </div>
 
             {/* GoogleMap  */}
