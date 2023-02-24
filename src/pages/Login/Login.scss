@@ -1,0 +1,115 @@
+@import "../../styles/reset";
+@import "../../styles/mixins";
+
+.loginPage {
+  .header-section {
+    width: 100%;
+    .Container {
+      width: inherit;
+      @include Container;
+      background-color: black;
+      position: relative;
+      width: 100vw;
+      a {
+        display: block;
+        padding: 20px;
+      }
+    }
+  }
+  .details-email {
+    .Container {
+      @include Container;
+      .note {
+        // font-weight: 500;
+        padding: 15px 0;
+        font-size: 1.3rem;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 0 5px;
+        .email-input {
+          padding: 10px 20px;
+          border-radius: 10px;
+          border: none;
+          font-size: 1.1rem;
+          font-weight: 200;
+          background-color: lightgray;
+          outline: 2px solid black;
+          margin-bottom: 15px;
+          &::placeholder {
+            font-weight: 100;
+          }
+        }
+
+        .buttonSubmit {
+          border-radius: 10px;
+          background-color: #000000;
+          cursor: pointer;
+          border: none;
+
+          &:hover {
+            background: rgba(2, 6, 12, 0.7);
+            border: solid #000000 1px;
+          }
+          p {
+            font-weight: lighter;
+            color: #ffffff;
+            font-size: 1.1rem;
+            padding: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .divider-wrapper {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .divider {
+      height: 1px;
+      width: 45%;
+      background-color: rgb(219, 213, 213);
+    }
+    .or {
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+  }
+}
+
+.SocialSection {
+  .wth-ggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: darken(#f5f5f5, 7);
+    padding: 10px 0;
+    text-decoration: none;
+    color: lighten(black, 20);
+    font-weight: lighter;
+    border-radius: 12px;
+    border: none;
+    &:hover {
+      background-color: darken(#f5f5f5, 15);
+    }
+
+    &:nth-child(2) {
+      margin: 10px 0;
+    }
+
+    p {
+      margin-right: 10px;
+    }
+  }
+}
+.somehow-footer {
+  font-size: 0.84rem;
+  font-weight: 300;
+  margin: 20px 0;
+  color: darken(#f5f5f5, 30);
+}

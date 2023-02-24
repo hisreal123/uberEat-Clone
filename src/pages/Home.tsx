@@ -15,6 +15,7 @@ const AppImage = <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em
 // MyMap
 import MyMap from '../components/Map/Map'
 import Footer from '../components/Footer/Footer'
+import Header from '../components/Header/Header'
 
 
 type HomeProps = {
@@ -30,7 +31,7 @@ export default function Home({ show }: HomeProps) {
 
     return (
         <div className='Home'>
-
+            <Header />
             {/*============================= Banner ==========================*/}
             <div className='Banner'>
                 <div className="Container">
@@ -57,7 +58,7 @@ export default function Home({ show }: HomeProps) {
                     </div>
 
                     <p className='signin'>
-                        <a href="#">Sign In </a>
+                        <a href="/login">Sign In </a>
                         for your recent addresses
                     </p>
                 </div>

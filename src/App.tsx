@@ -4,20 +4,20 @@ import Home from './pages/Home';
 // import NoPage from './pages/NoPage';
 
 import Header from './components/Header/Header'
-import Login from './pages/Login';
+import Login from './pages/Login/Login';
 import About from './pages/About';
 
-const HeaderLayout = () => {
-  return (
-    <>
-      <Header />
-      <Outlet />
-    </>
-  )
-}
+// const HeaderLayout = () => {
+//   return (
+//     <>
+//       <Header />
+//       <Outlet />
+//     </>
+//   )
+// }
 const router = createBrowserRouter([
   {
-    element: <HeaderLayout />,
+    // element: <HeaderLayout />,
     children: [
       {
         path: '/',
