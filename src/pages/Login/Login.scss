@@ -2,8 +2,9 @@
 @import "../../styles/mixins";
 
 .loginPage {
+  /*----------------------------------------- Big screen View Last View Shoot  ----------------------------------------*/
   .header-section {
-    width: 100%;
+      width: 100%;
     .Container {
       width: inherit;
       @include Container;
@@ -13,11 +14,15 @@
       a {
         display: block;
         padding: 20px;
-      }
     }
+}
   }
   .details-email {
-    .Container {
+      @media (min-width: 769px) and (max-width: 3000px) {
+        width: 30%;
+        margin: 0 auto;
+      }
+      .Container {
       @include Container;
       .note {
         // font-weight: 500;
